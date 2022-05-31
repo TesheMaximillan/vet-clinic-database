@@ -1,37 +1,41 @@
-# curriculum-databases-projects-template
+# Vet clinic database: create animals table
 
-> This template should be used for database related projects at Microverse.
-> Generate your own repository, update this README and edit all files content while working on projects. You should not be adding any new files unless asked otherwise.
+> In this project I use a relational database to create the initial data structure for a vet clinic. I create a table to store animals' information, insert some data into it, and query it.
 
 
-## Getting Started
+## Basic Requirements I followed in this projects are:
 
-This repository includes files with plain SQL that can be used to recreate a database:
+* I created a database named vet_clinic.
+* I created a table named animals with the following columns:
 
-- Use [schema.sql](./schema.sql) to create all tables.
-- Use [data.sql](./data.sql) to populate tables with sample data.
-- Check [queries.sql](./queries.sql) for examples of queries that can be run on a newly created database. **Important note: this file might include queries that make changes in the database (e.g., remove records). Use them responsibly!**
+  - id: integer
+  - name: string
+  - date_of_birth: date
+  - escape_attempts: integer
+  - neutered: boolean
+  - weight_kg: decimal
 
+* I inserted a data to the animals table
+* I write queries from the animals
+
+## Technologies
+
+- Postgres
+- SQL
 
 ## Authors
 
-👤 **Author1**
+👤 **Teshome Kurabachew**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
-
-👤 **Author2**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@githubhandle](https://github.com/TesheMaximillan)
+- Twitter: [@twitterhandle](https://twitter.com/TesheKura)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/teshome-kurabachew-aa8067180/)
 
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](../../issues/).
+Feel free to check the [issues page](https://github.com/TesheMaximillan/vet-clinic-database/issues).
 
 ## Show your support
 
@@ -39,9 +43,7 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
+- Microverse
 
 ## 📝 License
 
