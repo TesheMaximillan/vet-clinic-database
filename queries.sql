@@ -8,3 +8,9 @@ SELECT name, escape_attempts FROM animals WHERE weight_kg > 10.5;
 SELECT * FROM animals WHERE neutered = TRUE;
 SELECT * FROM animals WHERE name NOT LIKE 'Gabumon';
 SELECT * FROM animals WHERE weight_kg >= 10.4 and weight_kg <= 17.3;
+
+BEGIN;
+UPDATE animals SET species = 'unspecified';
+SELECT species FROM animals;
+ROLLBACK;
+SELECT species FROM animals;
