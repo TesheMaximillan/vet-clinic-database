@@ -9,3 +9,4 @@ CREATE TABLE animals (
     weight_kg       DECIMAL,
     PRIMARY KEY(id)
 );
+
