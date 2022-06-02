@@ -28,3 +28,7 @@ CREATE TABLE species (
 
 ALTER TABLE animals
   DROP COLUMN species;
+
+ALTER TABLE animals
+ADD COLUMN species_id INT,
+ADD COLUMN owner_id INT;
