@@ -21,3 +21,11 @@ INSERT INTO owners (full_name, age) VALUES ('Jodie Whittaker', 38);
 
 INSERT INTO species (name) VALUES ('Pokemon');
 INSERT INTO species (name) VALUES ('Digimon');
+
+BEGIN;
+UPDATE animals
+  SET species_id = CASE
+                   WHEN name LIKE '%mon' THEN 2
+                   ELSE 1
+                END;
+COMMIT;
