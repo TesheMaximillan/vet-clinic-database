@@ -29,3 +29,19 @@ UPDATE animals
                    ELSE 1
                 END;
 COMMIT;
+
+BEGIN;
+UPDATE animals
+  SET owner_id = CASE
+                 WHEN name = 'Agumon'     THEN 1
+                 WHEN name = 'Gabumon'    THEN 2
+                 WHEN name = 'Pikachu'    THEN 2
+                 WHEN name = 'Devimon'    THEN 3
+                 WHEN name = 'Plantmon'   THEN 3
+                 WHEN name = 'Charmander' THEN 4
+                 WHEN name = 'Squirtle'   THEN 4
+                 WHEN name = 'Blossom'    THEN 4
+                 WHEN name = 'Angemon'    THEN 5
+                 WHEN name = 'Boarmon'    THEN 5
+              END;
+COMMIT;
