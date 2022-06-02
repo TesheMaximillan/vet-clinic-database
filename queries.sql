@@ -44,7 +44,3 @@ SELECT species, MIN(weight_kg), MAX(weight_kg) FROM animals GROUP BY species;
 SELECT species, date_of_birth, COUNT(escape_attempts), AVG(escape_attempts) FROM animals 
 GROUP BY species, date_of_birth
 HAVING date_of_birth > '1990-01-01' AND date_of_birth < '2000-01-01';
-
-ALTER TABLE animals
-  DROP COLUMN species;
-
