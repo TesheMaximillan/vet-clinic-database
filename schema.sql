@@ -47,6 +47,7 @@ CREATE TABLE specializations (
 );
 
 CREATE TABLE visits (
-    animals_id  INT,
-    vets_id     INT
+    animals_id      INT,
+    vets_id         INT,
+    date_of_visits  DATE
 );
