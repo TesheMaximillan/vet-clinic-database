@@ -44,3 +44,11 @@ SELECT species, MIN(weight_kg), MAX(weight_kg) FROM animals GROUP BY species;
 SELECT species, date_of_birth, COUNT(escape_attempts), AVG(escape_attempts) FROM animals 
 GROUP BY species, date_of_birth
 HAVING date_of_birth > '1990-01-01' AND date_of_birth < '2000-01-01';
+
+SELECT animals.id, name FROM owners INNER JOIN animals ON owner_id = owners.id WHERE owners.id = 4;
+SELECT animals.id, animals.name FROM animals INNER JOIN species ON species_id = species.id WHERE species.id = 1;
+SELECT owners.id,full_name, animals.id, name FROM owners LEFT JOIN animals ON owner_id = owners.id; 
+SELECT species.name, COUNT(*) FROM animals INNER JOIN species ON species_id = species.id GROUP BY species.name;
+SELECT species.id, animals.name, species.name FROM species INNER JOIN animals ON species_id = species.id WHERE species.id = 2 AND owner_id = 2;
+SELECT animals.id, name FROM owners INNER JOIN animals ON owner_id = owners.id WHERE owner_id = 5 AND escape_attempts = 0;
+SELECT full_name,  COUNT(owner_id) FROM owners INNER JOIN animals ON owner_id = owners.id GROUP BY full_name ORDER BY COUNT(owner_id) DESC LIMIT 1;
