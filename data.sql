@@ -11,3 +11,37 @@ INSERT INTO animals (name, date_of_birth, escape_attempts, neutered, weight_kg) 
 INSERT INTO animals (name, date_of_birth, escape_attempts, neutered, weight_kg) VALUES ('Boarmon','2005-06-07',7,TRUE,20.4);
 INSERT INTO animals (name, date_of_birth, escape_attempts, neutered, weight_kg) VALUES ('Blossom','1998-10-13',3,TRUE,17);
 INSERT INTO animals (name, date_of_birth, escape_attempts, neutered, weight_kg) VALUES ('Ditto','2022-05-14',4,TRUE,22);
+
+INSERT INTO owners (full_name, age) VALUES ('Sam Smith', 34);
+INSERT INTO owners (full_name, age) VALUES ('Jennifer Orwell', 19);
+INSERT INTO owners (full_name, age) VALUES ('Bob', 45);
+INSERT INTO owners (full_name, age) VALUES ('Melody Pond', 77);
+INSERT INTO owners (full_name, age) VALUES ('Dean Winchester', 14);
+INSERT INTO owners (full_name, age) VALUES ('Jodie Whittaker', 38);
+
+INSERT INTO species (name) VALUES ('Pokemon');
+INSERT INTO species (name) VALUES ('Digimon');
+
+BEGIN;
+UPDATE animals
+  SET species_id = CASE
+                   WHEN name LIKE '%mon' THEN 2
+                   ELSE 1
+                END;
+COMMIT;
+
+BEGIN;
+UPDATE animals
+  SET owner_id = CASE
+                 WHEN name = 'Agumon'     THEN 1
+                 WHEN name = 'Gabumon'    THEN 2
+                 WHEN name = 'Pikachu'    THEN 2
+                 WHEN name = 'Devimon'    THEN 3
+                 WHEN name = 'Plantmon'   THEN 3
+                 WHEN name = 'Charmander' THEN 4
+                 WHEN name = 'Squirtle'   THEN 4
+                 WHEN name = 'Blossom'    THEN 4
+                 WHEN name = 'Angemon'    THEN 5
+                 WHEN name = 'Boarmon'    THEN 5
+              END;
+COMMIT;
