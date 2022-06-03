@@ -3,6 +3,7 @@
 > In this project I use a relational database to create the initial data structure for a vet clinic. I create a table to store animals' information, insert some data into it, and query it.
 > In the second milestone of this project, I used transactions to update and delete records. Also, I used aggregate functions and GROUP BY to answer analytical questions.
 > In the third milestone of this project, I did add some new tables and add foreign key columns to the existing animals table to model one-to-many relationships. Afterward, I used JOIN to query the data.
+> In the fourth Milestone of this project, I did add some many-to-many relationships and wrote more complex queries to use them to answer questions.
 
 ## Basic Requirements Milestone I:
 
@@ -37,6 +38,14 @@ Also I Verified that change was made. Then I rolled back the change and verify t
 * datas are `inserted` to owners and `species` table.
 * Modify `animals` table to include a value for `owner_id` and `species_id`.
 * Write queries using `JOIN`
+
+## Basic Requirements Milestone IV:
+
+* `vets` table is created.
+* `specialization` table is created to handle many-to-many relationship between `species` and `vets` tables.
+* `visits` table is created to handle many-to-many relationship between `animals` and `vets` tables.
+* data is inserted to `vets`, `specialization`, and `visits` tables.
+* Complex queries are wrote to answer the questions.
 
 ## Technologies
 
